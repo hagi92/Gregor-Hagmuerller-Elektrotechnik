@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gregor Hagmüller Elektrotechnik</title>
+  <meta name="description" content="Gregor Hagmüller Elektrotechnik – zuverlässig mit Hands-on-Mentalität. Elektroinstallation, Smarthome (Loxone Partner), PV, Sanierung, wiederkehrende Prüfung, Notdienst." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --card:#f8fafc;
+      --line:#e5e7eb;
+      --accent:#b59b2a; /* gold from logo */
+      --accent2:#0f172a;
+      --shadow:0 10px 30px rgba(2,8,23,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#fff 0%, #fff 45%, #f6f7fb 100%);
+    }
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);z-index:10;
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand img{width:44px;height:auto;display:block}
+    .brand strong{font-size:16px;letter-spacing:.2px}
+    .menu{display:flex;gap:14px;flex-wrap:wrap}
+    .menu a{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:12px}
+    .menu a:hover{background:var(--card);color:var(--text)}
+
+    .hero{padding:54px 0 18px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted);font-size:13px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    h1{margin:14px 0 10px;font-size:42px;line-height:1.1;letter-spacing:-.6px}
+    .lead{margin:0 0 20px;color:var(--muted);font-size:17px;line-height:1.6}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14px;box-shadow:none}
+    .btn.primary{background:var(--accent2);color:#fff;border-color:transparent}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn.secondary{background:#fff}
+    .btn.secondary:hover{background:var(--card)}
+
+    .card{
+      background:rgba(255,255,255,.75);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .logo-card{display:flex;align-items:center;justify-content:center;padding:26px}
+    .logo-card img{max-width:260px;width:100%;height:auto}
+
+    section{padding:24px 0}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 14px}
+    .section-title h2{margin:0;font-size:22px}
+    .section-title p{margin:0;color:var(--muted);font-size:14px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service h3{margin:0 0 8px;font-size:16px}
+    .service p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .kv{display:grid;gap:10px}
+    .row{display:flex;gap:10px;align-items:flex-start}
+    .label{min-width:92px;color:var(--muted);font-size:14px}
+    .value{font-weight:600}
+    .small{color:var(--muted);font-size:13px;line-height:1.6}
+
+    footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
+    footer .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+
+    @media (max-width: 900px){
+      h1{font-size:34px}
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 560px){
+      .grid{grid-template-columns:1fr}
+      .menu{display:none}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <img src="logo.png" alt="GH Elektrotechnik Logo" />
+          <div>
+            <strong>Gregor Hagmüller Elektrotechnik</strong><br />
+            <span style="font-size:12px;color:var(--muted)">Zuverlässig mit Hands-on-Mentalität</span>
+          </div>
+        </a>
+        <nav class="menu" aria-label="Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#notdienst">Notdienst</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="badge"><span class="dot"></span> Elektroinstallation • Smarthome (Loxone Partner) • PV • Prüfungen</span>
+            <h1>Alles rund um Elektrotechnik –<br/> sauber, schnell & zuverlässig.</h1>
+            <p class="lead">Ich unterstütze dich bei Elektroinstallationen, Sanierungen von Bestandsanlagen, Photovoltaik, wiederkehrenden Prüfungen und modernen Smarthome-Lösungen als <strong>Loxone Partner</strong>.</p>
+            <div class="cta">
+              <a class="btn primary" href="tel:+436641351882">📞 Jetzt anrufen: +43 664 1351882</a>
+              <a class="btn secondary" href="mailto:gregor.hagmuller@gmail.com">✉️ E-Mail schreiben</a>
+            </div>
+            <p class="small" style="margin-top:12px">Standort: Großharter Straße 11, 4062 Kirchberg</p>
+          </div>
+          <div class="card logo-card">
+            <img src="logo.png" alt="Gregor Hagmüller Elektrotechnik" />
+          </div>
+        </div>
+      </div>
+
+      <section id="leistungen">
+        <div class="section-title">
+          <h2>Leistungen</h2>
+          <p>Professionell • termintreu • hands-on</p>
+        </div>
+        <div class="grid">
+          <div class="card service">
+            <h3>Elektroinstallation</h3>
+            <p>Neuinstallation, Erweiterung, Fehleranalyse und saubere Ausführung nach Norm.</p>
+          </div>
+          <div class="card service">
+            <h3>Smarthome (Loxone Partner)</h3>
+            <p>Planung, Umsetzung und Optimierung moderner Smart‑Home‑Lösungen mit Loxone.</p>
+          </div>
+          <div class="card service">
+            <h3>PV-Anlagen</h3>
+            <p>Unterstützung bei Installation und Anbindung – für mehr Unabhängigkeit.</p>
+          </div>
+          <div class="card service">
+            <h3>Renovierung & Sanierung</h3>
+            <p>Sanierung von Bestandsanlagen, Modernisierung und Nachrüstungen.</p>
+          </div>
+          <div class="card service">
+            <h3>Wiederkehrende Prüfung</h3>
+            <p>Prüfungen und Protokollierung – für Sicherheit und verlässliche Funktion.</p>
+          </div>
+          <div class="card service" id="notdienst">
+            <h3>Notdienst</h3>
+            <p>Schnelle Hilfe bei Störungen – ruf einfach an, ich melde mich so rasch wie möglich.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt">
+        <div class="section-title">
+          <h2>Kontakt</h2>
+          <p>Unverbindlich anfragen</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card">
+            <div class="kv">
+              <div class="row"><div class="label">Telefon</div><div class="value"><a href="tel:+436641351882">+43 664 1351882</a></div></div>
+              <div class="row"><div class="label">E-Mail</div><div class="value"><a href="mailto:gregor.hagmuller@gmail.com">gregor.hagmuller@gmail.com</a></div></div>
+              <div class="row"><div class="label">Adresse</div><div class="value">Großharter Straße 11<br/>4062 Kirchberg</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="small" style="margin-top:0"><strong>Hinweis:</strong> Diese Seite ist bewusst schlank gehalten (schnell, günstig, wartungsarm). Wenn du möchtest, kann ich dir auch kostenlos ergänzen:</p>
+            <ul class="small">
+              <li>Impressum & Datenschutz (AT/DSGVO) als Unterseiten</li>
+              <li>Referenzen/Fotos & Projektgalerie</li>
+              <li>Kontaktformular (ohne Tracking)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="foot">
+          <div>© <span id="y"></span> Gregor Hagmüller Elektrotechnik</div>
+          <div><a href="#top" style="text-decoration:none">↑ nach oben</a></div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
