@@ -12,7 +12,7 @@
       --muted:#6b7280;
       --card:#f8fafc;
       --line:#e5e7eb;
-      --accent:#334155; /* Farbanpassung für Konsistenz */
+      --accent:#b59b2a;
       --accent2:#0f172a;
       --shadow:0 10px 30px rgba(2,8,23,.08);
       --radius:18px;
@@ -38,6 +38,19 @@
     .menu a{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:12px}
     .menu a:hover{background:var(--card);color:var(--text)}
 
+    .hero{padding:54px 0 18px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted);font-size:13px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    h1{margin:14px 0 10px;font-size:40px;line-height:1.15;letter-spacing:-.6px}
+    .lead{margin:0 0 20px;color:var(--muted);font-size:17px;line-height:1.6}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14px;box-shadow:none}
+    .btn.primary{background:var(--accent2);color:#fff;border-color:transparent}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn.secondary{background:#fff}
+    .btn.secondary:hover{background:var(--card)}
+
     .card{
       background:rgba(255,255,255,.75);
       border:1px solid var(--line);
@@ -45,8 +58,19 @@
       box-shadow:var(--shadow);
       padding:18px;
     }
+    .logo-card{display:flex;align-items:center;justify-content:center;padding:26px}
+    .logo-card img{max-width:260px;width:100%;height:auto}
 
     section{padding:24px 0}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 14px}
+    .section-title h2{margin:0;font-size:22px}
+    .section-title p{margin:0;color:var(--muted);font-size:14px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service h3{margin:0 0 8px;font-size:16px}
+    .service p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .kv{display:grid;gap:10px}
     .row{display:flex;gap:10px;align-items:flex-start}
     .label{min-width:110px;color:var(--muted);font-size:14px}
@@ -60,9 +84,18 @@
     footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
     footer .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
     footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{color:var(--text)}
 
+    @media (max-width: 900px){
+      h1{font-size:32px}
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
     @media (max-width: 560px){
+      .grid{grid-template-columns:1fr}
       .menu{display:none}
+      h1{font-size:28px}
     }
 </style>
 </head>
@@ -91,7 +124,7 @@
     <div class="container">
       <div class="page-title">
         <h1>Impressum</h1>
-        <p>Angaben gemäß Informationspflichten für Online-Dienste sowie Offenlegung nach Medienrecht.</p>
+        <p>Angaben gemäß Informationspflichten für Online-Dienste (u. a. § 5 ECG) sowie Offenlegung nach Medienrecht, soweit anwendbar.</p>
       </div>
 
       <section>
@@ -110,8 +143,35 @@
             <div class="row"><div class="label">UID</div><div class="value">ATU80607979</div></div>
             <div class="row"><div class="label">GISA-Zahl</div><div class="value">37125967</div></div>
             <div class="row"><div class="label">Berufszweig</div><div class="value">Elektrotechniker</div></div>
+            <div class="row"><div class="label">Gewerbewortlaut</div><div class="value">Elektrotechnik, ausgenommen die Errichtung von Alarmanlagen</div></div>
+            <div class="row"><div class="label">Gewerberechtliche Geschäftsführung</div><div class="value">–</div></div>
             <div class="row"><div class="label">Behörde gem. ECG</div><div class="value">Bezirkshauptmannschaft Linz-Land</div></div>
+            <div class="row"><div class="label">Seit</div><div class="value">03.05.2024</div></div>
           </div>
+
+          <div style="height:14px"></div>
+          <p class="small" style="margin:0">Sofern eine Firmenbuch-Eintragung besteht, sind Firmenbuchnummer und Firmenbuchgericht zusätzlich anzuführen. (Derzeit keine Angaben.)</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2 style="margin-top:0">Haftung für Inhalte</h2>
+          <p class="small" style="margin:0">Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2 style="margin-top:0">Haftung für Links</h2>
+          <p class="small" style="margin:0">Diese Website enthält gegebenenfalls Links zu externen Websites Dritter. Auf deren Inhalte besteht kein Einfluss. Für diese fremden Inhalte wird daher keine Gewähr übernommen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2 style="margin-top:0">Urheberrecht</h2>
+          <p class="small" style="margin:0">Die auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) unterliegen dem Urheberrecht. Jede Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung des jeweiligen Rechteinhabers.</p>
         </div>
       </section>
 
