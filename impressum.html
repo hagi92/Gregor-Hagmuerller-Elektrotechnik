@@ -1,191 +1,231 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Impressum – Gregor Hagmüller Elektrotechnik</title>
-  <meta name="robots" content="index,follow" />
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --card:#f8fafc;
-      --line:#e5e7eb;
-      --accent:#b59b2a;
-      --accent2:#0f172a;
-      --shadow:0 10px 30px rgba(2,8,23,.08);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,#fff 0%, #fff 45%, #f6f7fb 100%);
-    }
-    a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{
-      position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter: blur(8px);
-      border-bottom:1px solid var(--line);z-index:10;
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .brand img{width:44px;height:auto;display:block}
-    .brand strong{font-size:16px;letter-spacing:.2px}
-    .menu{display:flex;gap:14px;flex-wrap:wrap}
-    .menu a{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:12px}
-    .menu a:hover{background:var(--card);color:var(--text)}
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Impressum – Gregor Hagmüller Elektrotechnik</title>
 
-    .hero{padding:54px 0 18px}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}
-    .badge{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted);font-size:13px}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
-    h1{margin:14px 0 10px;font-size:40px;line-height:1.15;letter-spacing:-.6px}
-    .lead{margin:0 0 20px;color:var(--muted);font-size:17px;line-height:1.6}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14px;box-shadow:none}
-    .btn.primary{background:var(--accent2);color:#fff;border-color:transparent}
-    .btn.primary:hover{filter:brightness(1.05)}
-    .btn.secondary{background:#fff}
-    .btn.secondary:hover{background:var(--card)}
+<style>
+ :root{
+  --bg:#ffffff;
+  --bg-alt:#f1f5f9;
+  --text:#0f172a;
+  --muted:#475569;
+  --card:#ffffff;
+  --line:#e2e8f0;
+  --accent2:#1e293b;
+  --shadow:0 4px 6px -1px rgb(0 0 0 / 0.1),0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius:16px;
+ }
 
-    .card{
-      background:rgba(255,255,255,.75);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-    }
-    .logo-card{display:flex;align-items:center;justify-content:center;padding:26px}
-    .logo-card img{max-width:260px;width:100%;height:auto}
+ *{box-sizing:border-box; transition:0.2s ease;}
+ body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+ }
 
-    section{padding:24px 0}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 14px}
-    .section-title h2{margin:0;font-size:22px}
-    .section-title p{margin:0;color:var(--muted);font-size:14px}
+ .container{max-width:1100px;margin:0 auto;padding:0 24px;}
 
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .service h3{margin:0 0 8px;font-size:16px}
-    .service p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+ header{
+  position:sticky;top:0;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  z-index:100;
+ }
 
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .kv{display:grid;gap:10px}
-    .row{display:flex;gap:10px;align-items:flex-start}
-    .label{min-width:110px;color:var(--muted);font-size:14px}
-    .value{font-weight:600}
-    .small{color:var(--muted);font-size:13px;line-height:1.6}
+ .nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0;
+ }
 
-    .page-title{padding:34px 0 10px}
-    .page-title h1{font-size:34px;margin:0 0 6px}
-    .page-title p{margin:0;color:var(--muted)}
+ .brand{
+  display:flex;align-items:center;gap:14px;
+  text-decoration:none;color:#000;
+ }
 
-    footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
-    footer .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
-    footer a{color:var(--muted);text-decoration:none}
-    footer a:hover{color:var(--text)}
+ .brand img{width:60px;height:auto;}
+ .brand strong{font-size:18px;color:var(--accent2);}
 
-    @media (max-width: 900px){
-      h1{font-size:32px}
-      .hero-grid{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr 1fr}
-      .contact-grid{grid-template-columns:1fr}
-    }
-    @media (max-width: 560px){
-      .grid{grid-template-columns:1fr}
-      .menu{display:none}
-      h1{font-size:28px}
-    }
+ .menu{
+  display:flex;gap:14px;
+ }
+ .menu a{
+  padding:8px 14px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:500;
+  color:var(--muted);
+ }
+ .menu a:hover{
+  background:var(--bg-alt);
+  color:var(--text);
+ }
+
+ .page-title{
+  padding:60px 0 20px;
+ }
+ .page-title h1{
+  margin:0;
+  font-size:38px;
+  font-weight:800;
+ }
+ .page-title p{
+  margin-top:6px;
+  color:var(--muted);
+ }
+
+ section{
+  padding:20px 0 30px;
+ }
+
+ .card{
+  background:var(--card);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:var(--radius);
+  padding:30px;
+  margin-bottom:30px;
+ }
+
+ .row{display:flex;gap:10px;margin-bottom:10px;}
+ .label{min-width:120px;color:var(--muted);}
+ .value{font-weight:600;color:var(--text);}
+
+ .small{font-size:14px;color:var(--muted);line-height:1.6;}
+
+ /* ✅ Links überall schwarz */
+ a{
+   color:#000 !important;
+   text-decoration:none;
+ }
+ a:hover{
+   color:#444 !important;
+   text-decoration:underline;
+ }
+
+ footer{
+  padding:40px 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:14px;
+ }
+
+ .foot{
+  display:flex;justify-content:space-between;align-items:center;
+ }
+
+ @media(max-width:900px){
+  .page-title h1{font-size:30px;}
+ }
 </style>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="index.html" aria-label="Start">
-          <img src="logo.png" alt="GH Elektrotechnik Logo" />
-          <div>
-            <strong>Gregor Hagmüller Elektrotechnik</strong><br />
-            <span style="font-size:12px;color:var(--muted)">Zuverlässig mit Hands-on-Mentalität</span>
-          </div>
-        </a>
-        <nav class="menu" aria-label="Navigation">
-          <a href="index.html#leistungen">Leistungen</a>
-          <a href="index.html#notdienst">Notdienst</a>
-          <a href="index.html#kontakt">Kontakt</a>
-          <a href="impressum.html" aria-current="page">Impressum</a>
-        </nav>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <div class="container">
-      <div class="page-title">
-        <h1>Impressum</h1>
-        <p>Angaben gemäß Informationspflichten für Online-Dienste (u. a. § 5 ECG) sowie Offenlegung nach Medienrecht, soweit anwendbar.</p>
-      </div>
+<header>
+ <div class="container">
+  <div class="nav">
 
-      <section>
-        <div class="card">
-          <h2 style="margin-top:0">Diensteanbieter / Medieninhaber</h2>
-          <div class="kv">
-            <div class="row"><div class="label">Name/Firma</div><div class="value">Gregor Hagmüller Elektrotechnik</div></div>
-            <div class="row"><div class="label">Adresse</div><div class="value">Großharter Straße 11, 4062 Kirchberg-Thening, Österreich</div></div>
-            <div class="row"><div class="label">Telefon</div><div class="value"><a href="tel:+436641351882">+43 664 1351882</a></div></div>
-            <div class="row"><div class="label">E-Mail</div><div class="value"><a href="mailto:gregor.hagmuller@gmail.com">gregor.hagmuller@gmail.com</a></div></div>
-          </div>
+   <a class="brand" href="index.html">
+     <img src="logo.png" alt="GH Elektrotechnik Logo">
+     <div>
+       <strong>Gregor Hagmüller Elektrotechnik</strong><br/>
+       <span style="font-size:12px;color:var(--muted);">
+         Zuverlässig mit Hands‑on‑Mentalität
+       </span>
+     </div>
+   </a>
 
-          <div style="height:14px"></div>
-          <h2 style="margin:0 0 10px">Unternehmensangaben</h2>
-          <div class="kv">
-            <div class="row"><div class="label">UID</div><div class="value">ATU80607979</div></div>
-            <div class="row"><div class="label">GISA-Zahl</div><div class="value">37125967</div></div>
-            <div class="row"><div class="label">Berufszweig</div><div class="value">Elektrotechniker</div></div>
-            <div class="row"><div class="label">Gewerbewortlaut</div><div class="value">Elektrotechnik, ausgenommen die Errichtung von Alarmanlagen</div></div>
-            <div class="row"><div class="label">Gewerberechtliche Geschäftsführung</div><div class="value">–</div></div>
-            <div class="row"><div class="label">Behörde gem. ECG</div><div class="value">Bezirkshauptmannschaft Linz-Land</div></div>
-            <div class="row"><div class="label">Seit</div><div class="value">03.05.2024</div></div>
-          </div>
+   <nav class="menu">
+    <a href="index.html#leistungen">Leistungen</a>
+    <a href="index.html#kontakt">Kontakt</a>
+    <a href="impressum.html" aria-current="page">Impressum</a>
+   </nav>
 
-          <div style="height:14px"></div>
-          <p class="small" style="margin:0">Sofern eine Firmenbuch-Eintragung besteht, sind Firmenbuchnummer und Firmenbuchgericht zusätzlich anzuführen. (Derzeit keine Angaben.)</p>
-        </div>
-      </section>
+  </div>
+ </div>
+</header>
 
-      <section>
-        <div class="card">
-          <h2 style="margin-top:0">Haftung für Inhalte</h2>
-          <p class="small" style="margin:0">Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.</p>
-        </div>
-      </section>
+<main>
+ <div class="container">
 
-      <section>
-        <div class="card">
-          <h2 style="margin-top:0">Haftung für Links</h2>
-          <p class="small" style="margin:0">Diese Website enthält gegebenenfalls Links zu externen Websites Dritter. Auf deren Inhalte besteht kein Einfluss. Für diese fremden Inhalte wird daher keine Gewähr übernommen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</p>
-        </div>
-      </section>
+  <div class="page-title">
+   <h1>Impressum</h1>
+   <p>Angaben gemäß ECG, Mediengesetz und Unternehmensrecht.</p>
+  </div>
 
-      <section>
-        <div class="card">
-          <h2 style="margin-top:0">Urheberrecht</h2>
-          <p class="small" style="margin:0">Die auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) unterliegen dem Urheberrecht. Jede Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung des jeweiligen Rechteinhabers.</p>
-        </div>
-      </section>
+  <section>
 
-      <footer>
-        <div class="foot">
-          <div>© <span id="y"></span> Gregor Hagmüller Elektrotechnik</div>
-          <div><a href="index.html">← zurück zur Startseite</a></div>
-        </div>
-      </footer>
-    </div>
-  </main>
+   <div class="card">
+    <h2>Diensteanbieter / Medieninhaber</h2>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <div class="row"><div class="label">Name/Firma:</div><div class="value">Gregor Hagmüller Elektrotechnik</div></div>
+    <div class="row"><div class="label">Adresse:</div><div class="value">Großharter Straße 11, 4062 Kirchberg-Thening, Österreich</div></div>
+    <div class="row"><div class="label">Telefon:</div><div class="value"><a href="tel:+436641351882">+43 664 1351882</a></div></div>
+    <div class="row"><div class="label">E-Mail:</div><div class="value"><a href="mailto:gregor.hagmuller@gmail.com">gregor.hagmuller@gmail.com</a></div></div>
+
+   </div>
+
+   <div class="card">
+    <h2>Unternehmensangaben</h2>
+
+    <div class="row"><div class="label">UID:</div><div class="value">ATU80607979</div></div>
+    <div class="row"><div class="label">GISA‑Zahl:</div><div class="value">37125967</div></div>
+    <div class="row"><div class="label">Berufszweig:</div><div class="value">Elektrotechniker</div></div>
+    <div class="row"><div class="label">Gewerbewortlaut:</div><div class="value">Elektrotechnik, ausgenommen die Errichtung von Alarmanlagen</div></div>
+    <div class="row"><div class="label">Behörde gem. ECG:</div><div class="value">Bezirkshauptmannschaft Linz‑Land</div></div>
+    <div class="row"><div class="label">Seit:</div><div class="value">03.05.2024</div></div>
+
+    <p class="small">
+     Sofern eine Firmenbucheintragung besteht, sind Firmenbuchnummer und Firmenbuchgericht anzuführen.
+     (Derzeit keine Eintragung.)
+    </p>
+   </div>
+
+   <div class="card">
+    <h2>Haftung für Inhalte</h2>
+    <p class="small">
+     Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit
+     und Aktualität der Inhalte wird jedoch keine Gewähr übernommen.
+    </p>
+   </div>
+
+   <div class="card">
+    <h2>Haftung für Links</h2>
+    <p class="small">
+     Diese Website enthält ggf. Links zu externen Websites, auf deren Inhalte wir keinen Einfluss haben.
+     Für diese Inhalte wird keine Haftung übernommen. Verantwortlich ist jeweils der Betreiber der verlinkten Seite.
+    </p>
+   </div>
+
+   <div class="card">
+    <h2>Urheberrecht</h2>
+    <p class="small">
+     Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) unterliegen dem Urheberrecht.
+     Nutzung außerhalb der gesetzlichen Grenzen nur mit schriftlicher Zustimmung.
+    </p>
+   </div>
+
+  </section>
+
+ </div>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="foot">
+   <div>© <span id="year"></span> Gregor Hagmüller Elektrotechnik</div>
+   <a href="index.html">← Zurück zur Startseite</a>
+  </div>
+ </div>
+</footer>
+
+<script>
+ document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
