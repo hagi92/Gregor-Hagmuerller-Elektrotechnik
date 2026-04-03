@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
 <meta charset="utf-8"/>
@@ -13,7 +12,7 @@
       --muted:#6b7280;
       --card:#f8fafc;
       --line:#e5e7eb;
-      --accent:#b59b2a;
+      --accent:#334155; /* Gold durch Schiefergrau ersetzt */
       --accent2:#0f172a;
       --shadow:0 10px 30px rgba(2,8,23,.08);
       --radius:18px;
@@ -39,8 +38,8 @@
     .menu a{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:12px}
     .menu a:hover{background:var(--card);color:var(--text)}
 
-    .hero{padding:54px 0 18px}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}
+    .hero{padding:54px 0 18px; position:relative;}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
     .badge{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted);font-size:13px}
     .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
     h1{margin:14px 0 10px;font-size:40px;line-height:1.15;letter-spacing:-.6px}
@@ -59,8 +58,6 @@
       box-shadow:var(--shadow);
       padding:18px;
     }
-    .logo-card{display:flex;align-items:center;justify-content:center;padding:26px}
-    .logo-card img{max-width:260px;width:100%;height:auto}
 
     section{padding:24px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 14px}
@@ -78,10 +75,6 @@
     .value{font-weight:600}
     .small{color:var(--muted);font-size:13px;line-height:1.6}
 
-    .page-title{padding:34px 0 10px}
-    .page-title h1{font-size:34px;margin:0 0 6px}
-    .page-title p{margin:0;color:var(--muted)}
-
     footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
     footer .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
     footer a{color:var(--muted);text-decoration:none}
@@ -89,9 +82,9 @@
 
     @media (max-width: 900px){
       h1{font-size:32px}
-      .hero-grid{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr 1fr}
       .contact-grid{grid-template-columns:1fr}
+      .hero-logo { display: none; }
     }
     @media (max-width: 560px){
       .grid{grid-template-columns:1fr}
@@ -123,32 +116,38 @@
 <main id="top">
 <div class="container">
 <div class="hero">
-<div style="position:relative;"><img src="logo.png" style="position:absolute; top:-80px; right:-60px; opacity:0.25; width:200px;"/>
+<img class="hero-logo" src="logo.png" style="position:absolute; top:20px; right:20px; opacity:1; width:180px; z-index:1;"/>
+
+<div class="hero-grid">
 <div>
-<span class="badge"><span class="dot"></span> Elektroinstallation • Smarthome (Loxone Partner) • Photovoltaik • Prüfungen</span>
+<span class="badge"><span class="dot"></span> Elektroinstallation • Smarthome • Photovoltaik • Prüfungen</span>
 <h1>Ihr Partner für moderne Elektrotechnik –<br/> von der Installation bis zur Prüfung.</h1>
-<p class="lead"><div style="display:flex; gap:28px; align-items:flex-start;"><div style="flex:1; min-width:55%;">Gregor Hagmüller Elektrotechnik wurde 2024 gegründet und steht für moderne, zuverlässige und zukunftsorientierte Elektrotechniklösungen.<br/><br/>
-Von klassischen Elektroinstallationen – wie dem Einbau einer Steckdose oder der Erneuerung von Verteileranlagen – bis hin zu komplexen Smart‑Home-Systemen, Photovoltaikanlagen und professionellen Netzwerklösungen bieten wir sämtliche Leistungen aus einer Hand. Dabei verbinden wir handwerkliche Präzision mit innovativer Technik und nachhaltigen Energiekonzepten.<br/><br/>
+<div class="lead">
+<div style="display:flex; gap:28px; align-items:flex-start; flex-wrap:wrap;">
+<div style="flex:1; min-width:300px;">
+Gregor Hagmüller Elektrotechnik wurde 2024 gegründet und steht für moderne, zuverlässige und zukunftsorientierte Elektrotechniklösungen.<br/><br/>
+Von klassischen Elektroinstallationen bis hin zu komplexen Smart‑Home-Systemen bieten wir sämtliche Leistungen aus einer Hand.<br/><br/>
 <strong>Unser Leistungsspektrum umfasst:</strong><br/>
 • Elektroinstallationen im Neubau und Bestand<br/>
-• Erweiterungen, Sanierungen und Modernisierungen<br/>
 • Smart‑Home‑ und Gebäudeautomation (Loxone Silver Partner)<br/>
 • Planung und Installation von Photovoltaikanlagen<br/>
-• Netzwerk‑ und Datentechnik<br/>
 • Wartung, Überprüfung und Fehlerdiagnose<br/><br/>
-Für Notfälle stehen wir mit einem zuverlässigen Störungs‑ und Wochenenddienst zur Verfügung – schnell, unkompliziert und kompetent.<br/><br/>
-</div><div style="flex:0 0 330px; display:flex; flex-direction:column; gap:16px;"><img src="LOXONE_Partner-Logo_Silver_240x75_RZ_sRGB.jpg" style="width:100%; border-radius:12px; background:#fff;"/><img src="man-electrical-technician-working-switchboard-with-fuses.jpg" style="width:100%; border-radius:12px;"/></div></div></p>
+</div>
+<div style="flex:0 0 330px; display:flex; flex-direction:column; gap:16px;">
+<img src="LOXONE_Partner-Logo_Silver_240x75_RZ_sRGB.jpg" style="width:100%; border-radius:12px; background:#fff; border:1px solid var(--line);"/>
+<img src="man-electrical-technician-working-switchboard-with-fuses.jpg" style="width:100%; border-radius:12px;"/>
+</div>
+</div>
+</div>
 <div class="cta">
 <a class="btn primary" href="tel:+436641351882">📞 Jetzt anrufen: +43 664 1351882</a>
 <a class="btn secondary" href="mailto:gregor.hagmuller@gmail.com">✉️ E-Mail senden</a>
 </div>
 <p class="small" style="margin-top:12px">Adresse: Großharter Straße 11, 4062 Kirchberg-Thening</p>
 </div>
-<div class="card logo-card">
-<img alt="Gregor Hagmüller Elektrotechnik" src="logo.png"/>
 </div>
 </div>
-</div>
+
 <section id="leistungen">
 <div class="section-title">
 <h2>Leistungen</h2>
@@ -161,26 +160,27 @@ Für Notfälle stehen wir mit einem zuverlässigen Störungs‑ und Wochenenddie
 </div>
 <div class="card service">
 <h3>Smarthome (Loxone Partner)</h3>
-<p>Planung, Umsetzung und Optimierung moderner Smarthome-Lösungen – mit Fokus auf Komfort, Effizienz und Bedienbarkeit.</p>
+<p>Planung, Umsetzung und Optimierung moderner Smarthome-Lösungen – mit Fokus auf Komfort und Effizienz.</p>
 </div>
 <div class="card service">
 <h3>Photovoltaik</h3>
-<p>Unterstützung bei Installation, Anbindung und Inbetriebnahme – für mehr Unabhängigkeit und Nachhaltigkeit.</p>
+<p>Unterstützung bei Installation, Anbindung und Inbetriebnahme – für mehr Unabhängigkeit.</p>
 </div>
 <div class="card service">
 <h3>Renovierung &amp; Sanierung</h3>
-<p>Sanierung von Bestandsanlagen, Modernisierung sowie sichere Nachrüstungen – abgestimmt auf Ihre Anforderungen.</p>
+<p>Sanierung von Bestandsanlagen, Modernisierung sowie sichere Nachrüstungen.</p>
 </div>
 <div class="card service">
 <h3>Wiederkehrende Prüfung</h3>
-<p>Durchführung wiederkehrender Prüfungen inklusive Dokumentation – für Sicherheit, Funktion und Nachvollziehbarkeit.</p>
+<p>Durchführung wiederkehrender Prüfungen inklusive Dokumentation – für Ihre Sicherheit.</p>
 </div>
 <div class="card service" id="notdienst">
 <h3>Notdienst</h3>
-<p>Rasche Unterstützung bei Störungen: Bitte kontaktieren Sie mich telefonisch – ich melde mich so schnell wie möglich zurück.</p>
+<p>Rasche Unterstützung bei Störungen: Bitte kontaktieren Sie mich telefonisch.</p>
 </div>
 </div>
 </section>
+
 <section id="kontakt">
 <div class="section-title">
 <h2>Kontakt</h2>
@@ -196,6 +196,7 @@ Für Notfälle stehen wir mit einem zuverlässigen Störungs‑ und Wochenenddie
 </div>
 </div>
 </section>
+
 <footer>
 <div class="foot">
 <div>© <span id="y"></span> Gregor Hagmüller Elektrotechnik</div>
@@ -210,6 +211,6 @@ Für Notfälle stehen wir mit einem zuverlässigen Störungs‑ und Wochenenddie
 </main>
 <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+</script>
 </body>
 </html>
